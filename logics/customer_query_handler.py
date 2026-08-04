@@ -63,7 +63,8 @@ def identify_category_and_courses(user_message):
     return category_and_product_response
 
 
-filepath = '/workspaces/week6/data/courses-full.json'
+PROJECT_ROOT = Path(__file__).resolve().parents[1]   # logics/ -> repo root
+filepath = PROJECT_ROOT / "data" / "courses-full.json"
 # filepath = 'courses-full.json'
 
 with open(filepath, 'r') as file:
