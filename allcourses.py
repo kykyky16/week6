@@ -7,7 +7,12 @@ import pandas as pd
 st.markdown("All Courses")
 st.sidebar.markdown("All Courses")
 
-json_path = "/workspaces/week6/data/courses-full.json"
+BASE_DIR = Path(__file__).resolve().parent
+json_path = BASE_DIR / "data" / "courses-full.json"
+
+st.write("json_path:", json_path)
+st.write("exists:", json_path.exists())
+
 
 with open(json_path, "r", encoding="utf-8") as f:
     data = json.load(f)
