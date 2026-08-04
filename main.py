@@ -3,6 +3,8 @@ import streamlit as st
 #from helper_functions import llm # <--- This is the helper function that we have created 🆕
 from logics.customer_query_handler import process_user_message
 
+st.markdown("Main Page")
+st.sidebar.markdown("Main Page")
 
 # region <--------- Streamlit App Configuration --------->
 st.set_page_config(
